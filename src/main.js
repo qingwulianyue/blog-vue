@@ -5,7 +5,7 @@ import router from './router'
 const app = createApp(App)
 
 import axios from 'axios';
-
+/**
 const targetPaths = ['/api/user', '/api/admin'];
 
 axios.interceptors.request.use(config => {
@@ -16,6 +16,7 @@ axios.interceptors.request.use(config => {
     }
     return config;
 });
-
+**/
+axios.defaults.withCredentials = true;
 app.use(router)
 app.mount('#app')

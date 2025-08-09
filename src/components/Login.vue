@@ -736,8 +736,10 @@ const handleLoginSubmit = async () => {
     if (response.data.code === 1){
       showNotification('登录成功！', 'success');
       localStorage.setItem("elysiaBlogId", response.data.data.id)
+      /**
       localStorage.setItem("elysiaBlogToken", response.data.data.token)
       localStorage.setItem("elysiaBlogTokenName", response.data.data.tokenName)
+      **/
       await router.push('/main')
       console.log("跳转命令已发出")
       return
